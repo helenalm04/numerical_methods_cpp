@@ -1,0 +1,21 @@
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+.DS_Store
+
+# datasets + generated outputs
+tracking_data.dat
+speed_data.dat
+*.dat
+
+# keep data folder but ignore its contents
+data/*
+!data/README.md
+!data/.gitkeep
+
+# allow committing dataset
+!data/tracking_data.dat
