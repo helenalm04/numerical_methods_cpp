@@ -8,14 +8,24 @@ Makefile
 .DS_Store
 
 # datasets + generated outputs
-tracking_data.dat
-speed_data.dat
-*.dat
+# build
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+.DS_Store
 
-# keep data folder but ignore its contents
+# generated outputs (do not commit)
+*.dat
+verdict_*.txt
+acceleration_data.txt
+
+# keep data folder but ignore its contents by default
 data/*
 !data/README.md
 !data/.gitkeep
 
-# allow committing dataset
+# allow committing the input dataset
 !data/tracking_data.dat
