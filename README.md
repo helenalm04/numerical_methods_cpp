@@ -15,4 +15,21 @@ cmake --build build
 See `docs/Report.pdf`.
 
 ## Data
-Coursework datasets may be restricted. Place local data files in `data/` (see `data/README.md`).
+This code expects `tracking_data.dat` and writes `speed_data.dat` in the repository root.
+If your files are in `data/`, create symlinks:
+
+```bash
+# from the repository root
+ln -s data/tracking_data.dat tracking_data.dat
+
+# generate speed_data.dat in the repo root
+./build/q2
+
+# (optional) store it under data/
+mv speed_data.dat data/speed_data.dat
+
+# make q3 still find it (since q3 reads speed_data.dat from repo root)
+ln -s data/speed_data.dat speed_data.dat
+
+# now run q3
+./build/q3
