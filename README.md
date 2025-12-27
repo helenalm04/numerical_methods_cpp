@@ -30,12 +30,14 @@ Interpolates a power–speed relationship using Newton divided differences and e
 Simulates a 3D trajectory by integrating a first-order ODE system with RK4. Optional drag / Magnus terms are enabled via constants/flags in the code.
 
 ## Project structure
+```bash
 .
 ├── CMakeLists.txt
 ├── include/          # headers (constants + interpolation utilities)
 ├── src/              # q2/q3/q4 implementations
 ├── data/             # input dataset(s) (and optional stored outputs)
 └── docs/             # report (PDF)
+```
 
 ## Data and outputs
 By default, the code expects the input/output files in the repository root:
@@ -74,4 +76,4 @@ cmake --build build
 ```
 
 ## Example output
-![Speed vs time](figures/speed_plot.png)
+<img width="1280" height="720" alt="speed_plot" src="https://github.com/user-attachments/assets/25a85d8e-501d-4d9b-85aa-97b3ffb2469c" />
