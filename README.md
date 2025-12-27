@@ -74,6 +74,11 @@ rm -rf build
 cmake -S . -B build
 cmake --build build
 ```
+## Verification (expected results)
+- `q2`: generates `speed_data.dat` (≈999 rows if using centred differences)
+- Peak speed (from report): ~6.83 m/s
+- `q3`: energy estimates ~111529 J (trapezoid) and ~111532 J (Simpson-type)
+
 
 ## Example output
 <img width="1280" height="720" alt="speed_plot" src="https://github.com/user-attachments/assets/25a85d8e-501d-4d9b-85aa-97b3ffb2469c" />
